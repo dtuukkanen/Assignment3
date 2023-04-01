@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="5dp"
-    android:background="#4CAF50">
+    android:background="#4CAF50"
+    android:visibility="visible">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,6 +30,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Sähköposti" />
+
+        <TextView
+            android:id="@+id/textDegrees"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
 
     </LinearLayout>
 

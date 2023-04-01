@@ -8,7 +8,7 @@
 
     <EditText
         android:id="@+id/textFirstName"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:ems="10"
@@ -20,9 +20,9 @@
 
     <EditText
         android:id="@+id/textLastName"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Sukunimi"
@@ -32,9 +32,9 @@
 
     <EditText
         android:id="@+id/textEmail"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textEmailAddress"
         android:text="Sähköpostiosoite"
@@ -46,14 +46,14 @@
         android:id="@+id/rgDegreeProgram"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textEmail">
 
         <RadioButton
             android:id="@+id/rbTietotekniikka"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:text="Tietotekniikka" />
 
@@ -76,15 +76,64 @@
             android:text="Sähkotekniikka" />
     </RadioGroup>
 
+    <RadioGroup
+        android:id="@+id/rgDegrees"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/rgDegreeProgram"
+        app:layout_constraintStart_toStartOf="@+id/rgDegreeProgram"
+        app:layout_constraintTop_toBottomOf="@+id/rgDegreeProgram">
+
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/cbKandidaatti"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Kandidaatin tutkinto"
+        app:layout_constraintEnd_toEndOf="@+id/rgDegreeProgram"
+        app:layout_constraintStart_toStartOf="@+id/rgDegreeProgram"
+        app:layout_constraintTop_toBottomOf="@+id/rgDegreeProgram" />
+
+    <CheckBox
+        android:id="@+id/cbDI"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Diplomi-insinöörin tutkinto"
+        app:layout_constraintEnd_toEndOf="@+id/cbKandidaatti"
+        app:layout_constraintStart_toStartOf="@+id/cbKandidaatti"
+        app:layout_constraintTop_toBottomOf="@+id/cbKandidaatti" />
+
+    <CheckBox
+        android:id="@+id/cbTohtori"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Tekniikan tohtorin tutkinto"
+        app:layout_constraintEnd_toEndOf="@+id/cbDI"
+        app:layout_constraintStart_toStartOf="@+id/cbDI"
+        app:layout_constraintTop_toBottomOf="@+id/cbDI" />
+
+    <CheckBox
+        android:id="@+id/cbUima"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Uimamaisteri"
+        app:layout_constraintEnd_toEndOf="@+id/cbTohtori"
+        app:layout_constraintStart_toStartOf="@+id/cbTohtori"
+        app:layout_constraintTop_toBottomOf="@+id/cbTohtori" />
+
     <Button
         android:id="@+id/addUserButton"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="24dp"
         android:onClick="addUser"
         android:text="Lisää käyttäjä"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rgDegreeProgram" />
+        app:layout_constraintTop_toBottomOf="@+id/cbUima" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,12 +1,14 @@
 package com.example.simplestudentregister;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class User implements Serializable {
     private String firstName;
     private String lastName;
     private String email;
     private String degreeProgram;
+    private ArrayList<String> degrees = new ArrayList<>();
 
     public String getFirstName() {
         return firstName;
@@ -24,10 +26,15 @@ public class User implements Serializable {
         return degreeProgram;
     }
 
-    public User(String firstName, String lastName, String email, String degreeProgram) {
+    public ArrayList<String> getDegrees() {
+        return degrees;
+    }
+
+    public User(String firstName, String lastName, String email, String degreeProgram, ArrayList<String> degrees) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.degreeProgram = degreeProgram;
+        this.degrees = degrees;
     }
 }

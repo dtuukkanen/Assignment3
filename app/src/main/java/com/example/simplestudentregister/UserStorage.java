@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class UserStorage {
     private ArrayList<User> users = new ArrayList<>();
@@ -52,5 +54,14 @@ public class UserStorage {
             System.out.println("Käyttäjien lukeminen ei onnistunut");
             e.printStackTrace();
         }
+    }
+
+    public void sortUsers() {
+        Collections.sort(users, new Comparator<User>() {
+            @Override
+            public int compare(User user1, User user2) {
+                return user1.getLastName().compareTo(user2.getLastName());
+            }
+        });
     }
 }

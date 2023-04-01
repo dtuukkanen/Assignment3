@@ -29,6 +29,13 @@ public class UserListAdapter extends RecyclerView.Adapter<UserViewHolder> {
         holder.name.setText(users.get(position).getFirstName() + " " + users.get(position).getLastName());
         holder.degreeProgram.setText(users.get(position).getDegreeProgram());
         holder.email.setText(users.get(position).getEmail());
+        if (!users.get(position).getDegrees().isEmpty()) {
+            String listOfDegrees = "Suoritetut tutkinnot:";
+            for (String degree : users.get(position).getDegrees()) {
+                listOfDegrees += "\n-" + degree;
+            }
+            holder.degrees.setText(listOfDegrees);
+        }
     }
 
     @Override
